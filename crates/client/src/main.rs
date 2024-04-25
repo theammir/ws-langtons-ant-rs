@@ -34,7 +34,7 @@ fn main() {
     for message in receiver.incoming_messages() {
         if let OwnedMessage::Binary(mut data) = message.unwrap() {
             // Clear the screen
-            print!("\x1B[2J\x1B[H");
+            print!("\x1B[2J\x1B[1;1H");
             if args.debug {
                 println!("{:?}", data);
             }

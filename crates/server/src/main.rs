@@ -72,7 +72,7 @@ fn main() {
                 let message = OwnedMessage::Binary(bytes);
                 sender.send_message(&message).unwrap();
 
-                std::thread::sleep(std::time::Duration::from_millis(50));
+                std::thread::sleep(std::time::Duration::from_millis(args.delay as u64));
             }
         });
     }
